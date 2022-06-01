@@ -111,8 +111,15 @@ const stickyNav = function (entries) {
 
   if (!entry.isIntersecting) {
     nav.classList.add('sticky');
+    if(hiddenMenu.classList.contains('active')) {
+      hiddenMenu.classList.remove('active');
+      hiddenMenu.classList.add('active-sticky');
+    }
+  
   } else {
     nav.classList.remove('sticky');
+    hiddenMenu.classList.remove('active');
+    hiddenMenu.classList.remove('active-sticky');
   }
 };
 const headerObserver = new IntersectionObserver(stickyNav, {
@@ -240,3 +247,18 @@ const slider = function () {
 };
 
 slider();
+
+//toggle hamburger
+
+const hamMenu = document.querySelector('.hamburger');
+const hiddenMenu = document.querySelector('.nav__links');
+
+hamMenu.addEventListener('click', function () {
+  if (document.querySelector('.nav').classList.contains('sticky')) {
+    hiddenMenu.classList.toggle('active-sticky');
+  } else {
+    hiddenMenu.classList.toggle('active');
+  }
+});
+
+

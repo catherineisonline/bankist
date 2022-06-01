@@ -127,21 +127,21 @@ img {
 .nav.sticky {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.95);
+  
 }
 
 .nav__logo {
   height: 4.5rem;
   transition: all 0.3s;
 }
-
+.hamburger {
+  display: none;
+}
 .nav__links {
   display: flex;
   align-items: center;
   list-style: none;
-}
-
-.nav__item {
-  margin-left: 4rem;
+  gap: 2rem;
 }
 
 .nav__link:link,
