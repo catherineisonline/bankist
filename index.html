@@ -9,6 +9,7 @@
   <link rel="shortcut icon" type="image/png" href="img/icon.png" />
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" />
   <title>Bankist | When Banking meets Minimalist</title>
   <script defer src="script.js"></script>
 </head>
@@ -34,15 +35,18 @@
     </nav>
 
     <div class="header__title">
-      <h1>
-        When
-        <!-- Green highlight effect -->
-        <span class="highlight">banking</span>
-        meets<br />
-        <span class="highlight">minimalist</span>
-      </h1>
-      <h4>A simpler banking experience for a simpler life.</h4>
-      <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
+      <section class="header-content">
+        <h1>
+          When
+          <!-- Green highlight effect -->
+          <span class="highlight">banking</span>
+          meets<br />
+          <span class="highlight">minimalist</span>
+        </h1>
+        <h4>A simpler banking experience for a simpler life.</h4>
+        <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
+      </section>
+     
       <img src="img/hero.png" class="header__img" alt="Minimalist bank items" />
     </div>
   </header>
@@ -56,6 +60,7 @@
     </div>
 
     <div class="features">
+      <section class="feature-one">
       <img src="img/digital-lazy.jpg" data-src="img/digital.jpg" alt="Computer" class="features__img lazy-img" />
       <div class="features__feature">
         <div class="features__icon">
@@ -70,7 +75,8 @@
           debitis ducimus.
         </p>
       </div>
-
+    </section>
+<section class="feature-two">
       <div class="features__feature">
         <div class="features__icon">
           <svg>
@@ -85,7 +91,8 @@
         </p>
       </div>
       <img src="img/grow-lazy.jpg" data-src="img/grow.jpg" alt="Plant" class="features__img lazy-img" />
-
+    </section>
+    <section class="feature-three">
       <img src="img/card-lazy.jpg" data-src="img/card.jpg" alt="Credit card" class="features__img lazy-img" />
       <div class="features__feature">
         <div class="features__icon">
@@ -100,6 +107,7 @@
           inventore ab.
         </p>
       </div>
+    </section>
     </div>
   </section>
 
