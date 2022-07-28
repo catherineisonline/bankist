@@ -127,7 +127,6 @@ img {
 .nav.sticky {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.95);
-  
 }
 
 .nav__logo {
@@ -164,6 +163,24 @@ img {
 
 .nav__link--btn:hover,
 .nav__link--btn:active {
+  color: inherit;
+  background-color: var(--color-primary-darker);
+  color: #333;
+}
+
+.next--step {
+  padding: 1.2rem;
+  border-radius: 3rem;
+  background-color: var(--color-primary);
+  color: #222;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s;
+}
+.next--step:hover {
   color: inherit;
   background-color: var(--color-primary-darker);
   color: #333;
