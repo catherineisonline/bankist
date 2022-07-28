@@ -79,7 +79,7 @@ const btnClose = document.querySelector('.form__btn--close');
 const btnSort = document.querySelector('.btn--sort');
 
 const inputLoginUsername = document.querySelector('.login__input--user');
-const inputLoginPin = document.querySelector('.login__input--pin');
+const inputLoginPin = document.querySelector('.login__input--password');
 const inputTransferTo = document.querySelector('.form__input--to');
 const inputTransferAmount = document.querySelector('.form__input--amount');
 const inputLoanAmount = document.querySelector('.form__input--loan-amount');
@@ -223,7 +223,7 @@ btnLogin.addEventListener('click', function (e) {
       currentAccount.owner.split(' ')[0]
     }`;
     //Show hidden container
-    containerApp.style.opacity = 100;
+    containerApp.style.opacity = 1;
     //Create current date
     const now = new Date();
     const day = `${now.getDate()}`.padStart(2, 0);
