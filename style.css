@@ -10,6 +10,7 @@
   --color-tertiary-opacity: #ff58602d;
   --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
   --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+  --gradient-cancellation: linear-gradient(to top left, #e52a5a, #ff585f);
 }
 
 * {
@@ -71,7 +72,7 @@ body {
   font-weight: 500;
   border: none;
   padding: 1.25rem 4.5rem;
-  border-radius: 10rem;
+  border-radius: 2rem;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -156,7 +157,7 @@ img {
 .nav__link--btn:link,
 .nav__link--btn:visited {
   padding: 0.8rem 2.5rem;
-  border-radius: 3rem;
+  border-radius: 2rem;
   background-color: var(--color-primary);
   color: #222;
 }
@@ -170,11 +171,12 @@ img {
 
 .next--step {
   padding: 1.2rem;
-  border-radius: 3rem;
+  border-radius: 2rem;
   background-color: var(--color-primary);
   color: #222;
   font-size: 1.7rem;
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: 1px;
   color: inherit;
   text-decoration: none;
   display: block;

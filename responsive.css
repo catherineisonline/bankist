@@ -18,6 +18,29 @@
   .modal {
     padding: 3rem;
   }
+
+  nav {
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+  .logo {
+    display: none;
+  }
+  .login {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .login__input {
+    width: 40rem;
+    padding: 3rem;
+  }
+  .login__input::placeholder {
+    font-size: 2rem;
+  }
+  .login__btn {
+    font-size: 4rem;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -116,5 +139,9 @@
   .cookie-message button,
   .cookie-message {
     font-size: 0.8rem;
+  }
+  .login__input {
+    width: 30rem;
+    padding: 3rem;
   }
 }

@@ -1,36 +1,17 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  color: #444;
-  background-color: #f3f3f3;
-  height: 100vh;
-  padding: 2rem;
-}
-
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 3rem;
 }
 
 .welcome {
-  font-size: 1.9rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 .logo {
-  height: 5.25rem;
+  height: 4.5rem;
 }
 
 .login {
@@ -39,12 +20,12 @@ nav {
 
 .login__input {
   border: none;
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
   font-size: 1.6rem;
   font-family: inherit;
   text-align: center;
-  width: 12rem;
-  border-radius: 10rem;
+  width: 14rem;
+  border-radius: 3rem;
   margin-right: 1rem;
   color: inherit;
   border: 1px solid #fff;
@@ -58,12 +39,13 @@ nav {
 
 .login__input::placeholder {
   color: #bbb;
+  letter-spacing: 1px;
 }
 
 .login__btn {
   border: none;
   background: none;
-  font-size: 2.2rem;
+  font-size: 3rem;
   color: inherit;
   cursor: pointer;
   transition: all 0.3s;
@@ -74,7 +56,7 @@ nav {
 .btn--sort:hover,
 .btn--sort:focus {
   outline: none;
-  color: #777;
+  color: var(--color-primary);
 }
 
 /* MAIN */
@@ -149,11 +131,11 @@ nav {
 }
 
 .movements__type--deposit {
-  background-image: linear-gradient(to top left, #39b385, #9be15d);
+  background-image: var(--gradient-primary);
 }
 
 .movements__type--withdrawal {
-  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+  background-image: var(--gradient-cancellation);
 }
 
 .movements__value {
@@ -184,11 +166,11 @@ nav {
 
 .summary__value--in,
 .summary__value--interest {
-  color: #66c873;
+  color: var(--color-primary-darker);
 }
 
 .summary__value--out {
-  color: #f5465d;
+  color: var(--color-tertiary-darker);
 }
 
 .btn--sort {
@@ -208,15 +190,15 @@ nav {
 }
 
 .operation--transfer {
-  background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+  background-image: var(--gradient-secondary);
 }
 
 .operation--loan {
-  background-image: linear-gradient(to top left, #39b385, #9be15d);
+  background-image: var(--gradient-primary);
 }
 
 .operation--close {
-  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+  background-image: var(--gradient-cancellation);
 }
 
 h2 {
