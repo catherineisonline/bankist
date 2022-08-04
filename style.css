@@ -179,6 +179,7 @@ img {
   text-decoration: none;
   display: block;
   transition: all 0.3s;
+  width: max-content;
 }
 .next--step:hover {
   color: inherit;
@@ -666,8 +667,8 @@ h4 {
   font-family: inherit;
   color: inherit;
   position: absolute;
-  top: 0.5rem;
-  right: 2rem;
+  top: 0.3rem;
+  right: 1rem;
   font-size: 4rem;
   cursor: pointer;
   border: none;
