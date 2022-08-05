@@ -17,14 +17,17 @@
 
 <body>
   <!-- TOP NAVIGATION -->
-  <nav>
-    <p class="welcome">Log in to get started</p>
+  <nav class="login-nav">
     <img src="img/logo.png" alt="Logo" class="logo" />
+    <p class="welcome">Log in to get started</p>
+
+
     <form class="login">
       <input type="text" placeholder="user" class="login__input login__input--user" />
       <!-- In practice, use type="password" -->
       <input type="text" placeholder="password" maxlength="4" class="login__input login__input--password" />
       <button class="login__btn">&rarr;</button>
+      <a class="back-to-main" href="index.html">Back to main </a>
     </form>
   </nav>
 
@@ -101,6 +104,8 @@
         <label class="form__label">Confirm PIN</label>
       </form>
     </div>
+    <a class="back-to-main" href="index.html">Back to main </a>
+    <button class="btn logout">Log out</button>
 
     <!-- LOGOUT TIMER -->
     <p class="logout-timer">

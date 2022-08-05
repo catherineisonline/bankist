@@ -77,6 +77,7 @@ const btnTransfer = document.querySelector('.form__btn--transfer');
 const btnLoan = document.querySelector('.form__btn--loan');
 const btnClose = document.querySelector('.form__btn--close');
 const btnSort = document.querySelector('.btn--sort');
+const btnLogout = document.querySelector('.logout');
 
 const inputLoginUsername = document.querySelector('.login__input--user');
 const inputLoginPin = document.querySelector('.login__input--password');
@@ -85,6 +86,7 @@ const inputTransferAmount = document.querySelector('.form__input--amount');
 const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
+const loginForm = document.querySelector('.login');
 
 const formatMovementDate = function (date) {
   const calcDaysPassed = (date1, date2) =>
@@ -199,7 +201,9 @@ const startLogoutTimer = function () {
     if (timer === 0) {
       clearInterval(timing);
       labelWelcome.textContent = 'Log in to get started';
-      containerApp.style.opacity = 0;
+      // containerApp.style.opacity = 0;
+      containerApp.style.display = 'none';
+      loginForm.style.display = 'flex';
     }
     timer--;
   };
@@ -209,6 +213,14 @@ const startLogoutTimer = function () {
   const timing = setInterval(tick, 1000);
   return timing;
 };
+//Lougout with logut button
+btnLogout.addEventListener('click', function () {
+  labelWelcome.textContent = 'Log in to get started';
+  //opacity is good for better effect
+  // containerApp.style.opacity = 0;
+  containerApp.style.display = 'none';
+  loginForm.style.display = 'flex';
+});
 
 //Implement Login
 let currentAccount, timing;
@@ -216,16 +228,17 @@ btnLogin.addEventListener('click', function (e) {
   //prevent form from submiting
   e.preventDefault();
 
-  // console.log(inputLoginUsername.value);
   currentAccount = accounts.find(
     acc => acc.username === inputLoginUsername.value
   );
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
     labelWelcome.textContent = `Welcome back, ${
       currentAccount.owner.split(' ')[0]
-    }`;
+    }!`;
     //Show hidden container
-    containerApp.style.opacity = 1;
+    // containerApp.style.opacity = 1;
+    loginForm.style.display = 'none';
+    containerApp.style.display = 'grid';
     //Create current date
     const now = new Date();
     const day = `${now.getDate()}`.padStart(2, 0);
@@ -289,7 +302,9 @@ btnClose.addEventListener('click', function (e) {
     console.log(index);
 
     accounts.splice(index, 1);
-    containerApp.style.opacity = 0;
+    // containerApp.style.opacity = 0;
+    loginForm.style.display = 'none';
+    containerApp.style.display = 'none';
   }
 
   inputCloseUsername.value = inputClosePin.value = '';
@@ -332,23 +347,23 @@ btnSort.addEventListener('click', function (e) {
 /////////////////////////////////////////////////
 // LECTURES
 
-const currencies = new Map([
-  ['USD', 'United States dollar'],
-  ['EUR', 'Euro'],
-  ['GBP', 'Pound sterling'],
-]);
+// const currencies = new Map([
+//   ['USD', 'United States dollar'],
+//   ['EUR', 'Euro'],
+//   ['GBP', 'Pound sterling'],
+// ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-/////////////////////////////////////////////////
+// /////////////////////////////////////////////////
 
-// const eurToUsd = 1.1;
+// // const eurToUsd = 1.1;
 
-// const movementsUSD = movements.map(mov => mov * eurToUsd);
+// // const movementsUSD = movements.map(mov => mov * eurToUsd);
 
-// const movementsDescriptions = containerMovements.map(
-//   (mov, i) =>
-//     `Movement ${i + 1}: You ${mov > 0 ? 'deposted' : 'withdrew'} ${Math.abs(
-//       mov
-//     )}`
-// );
+// // const movementsDescriptions = containerMovements.map(
+// //   (mov, i) =>
+// //     `Movement ${i + 1}: You ${mov > 0 ? 'deposted' : 'withdrew'} ${Math.abs(
+// //       mov
+// //     )}`
+// // );

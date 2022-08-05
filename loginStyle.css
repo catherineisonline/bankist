@@ -1,8 +1,11 @@
-nav {
+.login-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
   padding: 3rem;
+  margin-top: 10%;
+  gap: 2rem;
 }
 
 .welcome {
@@ -11,25 +14,34 @@ nav {
 }
 
 .logo {
-  height: 4.5rem;
+  height: 9rem;
 }
 
 .login {
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.back-to-main {
+  color: var(--color-primary-darker);
+  font-size: 1.5rem;
 }
 
 .login__input {
   border: none;
-  padding: 1rem 2rem;
+  /* padding: 1rem 2rem; */
   font-size: 1.6rem;
   font-family: inherit;
   text-align: center;
-  width: 14rem;
+  /* width: 14rem; */
   border-radius: 3rem;
   margin-right: 1rem;
   color: inherit;
   border: 1px solid #fff;
   transition: all 0.3s;
+  width: 40rem;
+  padding: 3rem;
 }
 
 .login__input:focus {
@@ -65,13 +77,14 @@ nav {
   max-width: 100rem;
   margin: 4rem auto;
   padding-bottom: 4rem;
-  display: grid;
+  display: none;
+  /* display: grid; */
   grid-template-columns: 4fr 3fr;
   grid-template-rows: auto repeat(3, 15rem) auto;
   gap: 2rem;
 
   /* NOTE This creates the fade in/out anumation */
-  opacity: 0;
+  /* opacity: 0; */
   transition: all 1s;
 }
 
@@ -272,3 +285,16 @@ h2 {
 .timer {
   font-weight: 600;
 }
+
+/* .logout-btn {
+  display: inline-block;
+  background-color: var(--color-primary);
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1.25rem 4.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+} */

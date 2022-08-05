@@ -24,13 +24,7 @@
     gap: 3rem;
     margin-top: 2rem;
   }
-  .logo {
-    display: none;
-  }
-  .login {
-    flex-direction: column;
-    gap: 2rem;
-  }
+
   .login__input {
     width: 40rem;
     padding: 3rem;
@@ -151,7 +145,7 @@
     display: none;
   }
   .cookie-message button,
-  .cookie-message {
+  “ .cookie-message {
     font-size: 0.8rem;
   }
   .login__input {
@@ -161,7 +155,7 @@
   .app {
     justify-content: center;
     justify-items: center;
-    grid-template-columns: 80%;
+    grid-template-columns: 90%;
     margin: 0 auto;
   }
   .balance {
@@ -179,5 +173,8 @@
   .btn--sort {
     margin-left: initial;
     font-size: 2rem;
+  }
+  .movements__row {
+    padding: 2rem;
   }
 }
