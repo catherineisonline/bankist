@@ -1,12 +1,8 @@
 'use strict';
 
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-// BANKIST APP
-
 // Data
 const account1 = {
-  owner: 'Jonas Schmedtmann',
+  owner: 'Walter White',
   movements: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300],
   interestRate: 1.2, // %
   pin: 1111,
@@ -25,7 +21,7 @@ const account1 = {
   locale: 'pt-PT', // de-DE
 };
 const account2 = {
-  owner: 'Jessica Davis',
+  owner: 'Jesse Pinkman',
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
   interestRate: 1.5,
   pin: 2222,
@@ -44,20 +40,6 @@ const account2 = {
   locale: 'en-US',
 };
 
-// const account3 = {
-//   owner: 'Rosalie Wolter',
-//   movements: [200, -200, 340, -300, -20, 50, 400, -460],
-//   interestRate: 0.7,
-//   pin: 3333,
-// };
-
-// const account4 = {
-//   owner: 'John Schmidt',
-//   movements: [430, 1000, 700, 50, 90],
-//   interestRate: 1,
-//   pin: 4444,
-// };
-
 const accounts = [account1, account2];
 // Elements
 const labelWelcome = document.querySelector('.welcome');
@@ -71,6 +53,8 @@ const warningText = document.querySelector('.warning-text');
 
 const containerApp = document.querySelector('.app');
 const containerMovements = document.querySelector('.movements');
+const loginForm = document.querySelector('.login');
+const navContainer = document.querySelector('.login-nav');
 
 const btnLogin = document.querySelector('.login__btn');
 const btnTransfer = document.querySelector('.form__btn--transfer');
@@ -86,7 +70,6 @@ const inputTransferAmount = document.querySelector('.form__input--amount');
 const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
-const loginForm = document.querySelector('.login');
 
 const formatMovementDate = function (date) {
   const calcDaysPassed = (date1, date2) =>
@@ -204,6 +187,7 @@ const startLogoutTimer = function () {
       // containerApp.style.opacity = 0;
       containerApp.style.display = 'none';
       loginForm.style.display = 'flex';
+      navContainer.style.marginTop = '10%';
     }
     timer--;
   };
@@ -220,6 +204,7 @@ btnLogout.addEventListener('click', function () {
   // containerApp.style.opacity = 0;
   containerApp.style.display = 'none';
   loginForm.style.display = 'flex';
+  navContainer.style.marginTop = '10%';
 });
 
 //Implement Login
@@ -256,20 +241,9 @@ btnLogin.addEventListener('click', function (e) {
   } else if (!currentAccount && !bothInputsEmpty) {
     inputLoginUsername.classList.add('warning');
     inputLoginPin.classList.add('warning');
-    warningText.textContent = 'No such account found!';
+    warningText.textContent = "Account with such username doesn't exist!";
     console.log('no such acc');
   }
-  // else if (
-  //   inputLoginUsername.value === inputLoginUsername.value.toUpperCase() &&
-  //   !passwordEmpty &&
-  //   acc.username === inputLoginUsername.value.toLowerCase() &&
-  //   currentAccount?.pin === Number(inputLoginPin.value)
-  // ) {
-  //   inputLoginUsername.classList.add('warning');
-  //   inputLoginPin.classList.remove('warning');
-  //   warningText.textContent = 'Please write lowercase username!';
-  //   console.log('correct user but wrong casing');
-  // }
   /// if validation passed
   else {
     inputLoginUsername.classList.remove('warning');
@@ -283,6 +257,7 @@ btnLogin.addEventListener('click', function (e) {
       // containerApp.style.opacity = 1;
       loginForm.style.display = 'none';
       containerApp.style.display = 'grid';
+      navContainer.style.marginTop = '5%';
       //Create current date
       const now = new Date();
       const day = `${now.getDate()}`.padStart(2, 0);
@@ -348,8 +323,9 @@ btnClose.addEventListener('click', function (e) {
 
     accounts.splice(index, 1);
     // containerApp.style.opacity = 0;
-    loginForm.style.display = 'none';
+    loginForm.style.display = 'flex';
     containerApp.style.display = 'none';
+    navContainer.style.marginTop = '10%';
   }
 
   inputCloseUsername.value = inputClosePin.value = '';
