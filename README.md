@@ -17,10 +17,10 @@ Bankist is a fictional online bank. It is a project introduced by <a href="https
 
 ## Functionalities
 
-Login
-Transfer a value to another account
-Get loans
-Close (delete) account
+- Login
+- Transfer a value to another account
+- Get loans
+- Close (delete) account
 
 ## Login Details
 
@@ -28,16 +28,16 @@ This is the template login details to use the bank functionality. The project do
 
 #### Account One
 
-Login: ww
-Password: 1111
+- Login: ww
+- Password: 1111
 
 #### Account Two
 
-Login: jp
-Password: 2222
+- Login: jp
+- Password: 2222
 
 ## Technologies Used
 
-HTML
-CSS
-Vanilla JavaScript
+- HTML
+- CSS
+- Vanilla JavaScript
