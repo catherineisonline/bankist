@@ -1,4 +1,6 @@
 <img src="https://github.com/catherineisonline/bankist/blob/main/img/project-preview.png?raw=true" ></img>
+<img src="https://github.com/catherineisonline/bankist/blob/main/img/project-preview-2.png?raw=true" ></img>
+<img src="https://github.com/catherineisonline/bankist/blob/main/img/project-preview-3.png?raw=true" ></img>
 
 # Bankist
 
