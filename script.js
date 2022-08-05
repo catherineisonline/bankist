@@ -57,7 +57,10 @@ message.style.width = '120%';
 //Smooth Scroll Event Delegation
 document.querySelector('.nav__links').addEventListener('click', function (e) {
   e.preventDefault();
-  if (e.target.classList.contains('nav__link')) {
+  if (
+    e.target.classList.contains('nav__link') &&
+    !e.target.classList.contains('btn--show-modal')
+  ) {
     const id = e.target.getAttribute('href');
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
@@ -111,11 +114,10 @@ const stickyNav = function (entries) {
 
   if (!entry.isIntersecting) {
     nav.classList.add('sticky');
-    if(hiddenMenu.classList.contains('active')) {
+    if (hiddenMenu.classList.contains('active')) {
       hiddenMenu.classList.remove('active');
       hiddenMenu.classList.add('active-sticky');
     }
-  
   } else {
     nav.classList.remove('sticky');
     hiddenMenu.classList.remove('active');
@@ -260,5 +262,3 @@ hamMenu.addEventListener('click', function () {
     hiddenMenu.classList.toggle('active');
   }
 });
-
-

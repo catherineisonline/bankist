@@ -50,6 +50,10 @@
 .login__input.warning::placeholder {
   color: red;
 }
+.warning-text {
+  font-size: 2rem;
+  color: red;
+}
 
 .login__input:focus {
   outline: none;

@@ -59,7 +59,6 @@ const account2 = {
 // };
 
 const accounts = [account1, account2];
-
 // Elements
 const labelWelcome = document.querySelector('.welcome');
 const labelDate = document.querySelector('.date');
@@ -68,6 +67,7 @@ const labelSumIn = document.querySelector('.summary__value--in');
 const labelSumOut = document.querySelector('.summary__value--out');
 const labelSumInterest = document.querySelector('.summary__value--interest');
 const labelTimer = document.querySelector('.timer');
+const warningText = document.querySelector('.warning-text');
 
 const containerApp = document.querySelector('.app');
 const containerMovements = document.querySelector('.movements');
@@ -237,27 +237,44 @@ btnLogin.addEventListener('click', function (e) {
     inputLoginUsername.value.length === 0 && inputLoginPin.value.length === 0;
   let usernameEmpty = inputLoginUsername.value.length === 0;
   let passwordEmpty = inputLoginPin.value.length === 0;
+
   if (bothInputsEmpty) {
     inputLoginUsername.classList.add('warning');
     inputLoginPin.classList.add('warning');
+    warningText.textContent = 'Empty Username and Password!';
     console.log('empty both');
   } else if (usernameEmpty && !passwordEmpty) {
     inputLoginUsername.classList.add('warning');
     inputLoginPin.classList.remove('warning');
+    warningText.textContent = 'Empty Username!';
     console.log('empty username');
   } else if (passwordEmpty && !usernameEmpty) {
     inputLoginUsername.classList.remove('warning');
     inputLoginPin.classList.add('warning');
+    warningText.textContent = 'Empty Password!';
     console.log('empty password');
   } else if (!currentAccount && !bothInputsEmpty) {
     inputLoginUsername.classList.add('warning');
     inputLoginPin.classList.add('warning');
+    warningText.textContent = 'No such account found!';
     console.log('no such acc');
   }
+  // else if (
+  //   inputLoginUsername.value === inputLoginUsername.value.toUpperCase() &&
+  //   !passwordEmpty &&
+  //   acc.username === inputLoginUsername.value.toLowerCase() &&
+  //   currentAccount?.pin === Number(inputLoginPin.value)
+  // ) {
+  //   inputLoginUsername.classList.add('warning');
+  //   inputLoginPin.classList.remove('warning');
+  //   warningText.textContent = 'Please write lowercase username!';
+  //   console.log('correct user but wrong casing');
+  // }
   /// if validation passed
   else {
     inputLoginUsername.classList.remove('warning');
     inputLoginPin.classList.remove('warning');
+    warningText.textContent = ' ';
     if (currentAccount?.pin === Number(inputLoginPin.value)) {
       labelWelcome.textContent = `Welcome back, ${
         currentAccount.owner.split(' ')[0]
