@@ -227,34 +227,62 @@ let currentAccount, timing;
 btnLogin.addEventListener('click', function (e) {
   //prevent form from submiting
   e.preventDefault();
-
   currentAccount = accounts.find(
     acc => acc.username === inputLoginUsername.value
   );
-  if (currentAccount?.pin === Number(inputLoginPin.value)) {
-    labelWelcome.textContent = `Welcome back, ${
-      currentAccount.owner.split(' ')[0]
-    }!`;
-    //Show hidden container
-    // containerApp.style.opacity = 1;
-    loginForm.style.display = 'none';
-    containerApp.style.display = 'grid';
-    //Create current date
-    const now = new Date();
-    const day = `${now.getDate()}`.padStart(2, 0);
-    const month = `${now.getMonth() + 1}`.padStart(2, 0);
-    const year = now.getFullYear();
-    const hour = `${now.getHours()}`.padStart(2, 0);
-    const min = `${now.getMinutes()}`.padStart(2, 0);
-    labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
-    updateUI(currentAccount);
-    //Clear input
-    inputLoginUsername.value = inputLoginPin.value = '';
-    inputLoginPin.blur();
-    //clear time if it started on another acc
-    if (timing) clearInterval(timing);
-    //Start logout
-    timing = startLogoutTimer();
+  // const inputLoginUsername = document.querySelector('.login__input--user');
+  // const inputLoginPin = document.querySelector('.login__input--password');
+  ///Login validation
+  let bothInputsEmpty =
+    inputLoginUsername.value.length === 0 && inputLoginPin.value.length === 0;
+  let usernameEmpty = inputLoginUsername.value.length === 0;
+  let passwordEmpty = inputLoginPin.value.length === 0;
+  if (bothInputsEmpty) {
+    inputLoginUsername.classList.add('warning');
+    inputLoginPin.classList.add('warning');
+    console.log('empty both');
+  } else if (usernameEmpty && !passwordEmpty) {
+    inputLoginUsername.classList.add('warning');
+    inputLoginPin.classList.remove('warning');
+    console.log('empty username');
+  } else if (passwordEmpty && !usernameEmpty) {
+    inputLoginUsername.classList.remove('warning');
+    inputLoginPin.classList.add('warning');
+    console.log('empty password');
+  } else if (!currentAccount && !bothInputsEmpty) {
+    inputLoginUsername.classList.add('warning');
+    inputLoginPin.classList.add('warning');
+    console.log('no such acc');
+  }
+  /// if validation passed
+  else {
+    inputLoginUsername.classList.remove('warning');
+    inputLoginPin.classList.remove('warning');
+    if (currentAccount?.pin === Number(inputLoginPin.value)) {
+      labelWelcome.textContent = `Welcome back, ${
+        currentAccount.owner.split(' ')[0]
+      }!`;
+      //Show hidden container
+      // containerApp.style.opacity = 1;
+      loginForm.style.display = 'none';
+      containerApp.style.display = 'grid';
+      //Create current date
+      const now = new Date();
+      const day = `${now.getDate()}`.padStart(2, 0);
+      const month = `${now.getMonth() + 1}`.padStart(2, 0);
+      const year = now.getFullYear();
+      const hour = `${now.getHours()}`.padStart(2, 0);
+      const min = `${now.getMinutes()}`.padStart(2, 0);
+      labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
+      updateUI(currentAccount);
+      //Clear input
+      inputLoginUsername.value = inputLoginPin.value = '';
+      inputLoginPin.blur();
+      //clear time if it started on another acc
+      if (timing) clearInterval(timing);
+      //Start logout
+      timing = startLogoutTimer();
+    }
   }
 });
 

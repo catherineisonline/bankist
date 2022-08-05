@@ -42,6 +42,13 @@
   transition: all 0.3s;
   width: 40rem;
   padding: 3rem;
+  transition: all ease-in-out 0.2s;
+}
+.login__input.warning {
+  border: 1px solid red;
+}
+.login__input.warning::placeholder {
+  color: red;
 }
 
 .login__input:focus {
@@ -52,6 +59,7 @@
 .login__input::placeholder {
   color: #bbb;
   letter-spacing: 1px;
+  transition: all ease-in-out 0.2s;
 }
 
 .login__btn {
