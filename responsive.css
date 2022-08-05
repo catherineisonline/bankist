@@ -41,6 +41,13 @@
   .login__btn {
     font-size: 4rem;
   }
+  .app {
+    grid-template-columns: 50% 1fr;
+    width: 95%;
+  }
+  .movements__row {
+    justify-content: space-between;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -103,6 +110,13 @@
     padding: 2rem;
     z-index: 997;
   }
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .balance {
+    grid-column: 1 / span 1;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -143,5 +157,27 @@
   .login__input {
     width: 30rem;
     padding: 3rem;
+  }
+  .app {
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 80%;
+    margin: 0 auto;
+  }
+  .balance {
+    flex-direction: column;
+    align-items: center;
+  }
+  .summary {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .summary__label {
+    font-size: 2rem;
+  }
+  .btn--sort {
+    margin-left: initial;
+    font-size: 2rem;
   }
 }
