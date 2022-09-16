@@ -184,7 +184,6 @@ const startLogoutTimer = function () {
     if (timer === 0) {
       clearInterval(timing);
       labelWelcome.textContent = 'Log in to get started';
-      // containerApp.style.opacity = 0;
       containerApp.style.display = 'none';
       loginForm.style.display = 'flex';
       navContainer.style.marginTop = '10%';
@@ -200,8 +199,6 @@ const startLogoutTimer = function () {
 //Lougout with logut button
 btnLogout.addEventListener('click', function () {
   labelWelcome.textContent = 'Log in to get started';
-  //opacity is good for better effect
-  // containerApp.style.opacity = 0;
   containerApp.style.display = 'none';
   loginForm.style.display = 'flex';
   navContainer.style.marginTop = '10%';
@@ -215,8 +212,6 @@ btnLogin.addEventListener('click', function (e) {
   currentAccount = accounts.find(
     acc => acc.username === inputLoginUsername.value
   );
-  // const inputLoginUsername = document.querySelector('.login__input--user');
-  // const inputLoginPin = document.querySelector('.login__input--password');
   ///Login validation
   let bothInputsEmpty =
     inputLoginUsername.value.length === 0 && inputLoginPin.value.length === 0;
@@ -254,7 +249,6 @@ btnLogin.addEventListener('click', function (e) {
         currentAccount.owner.split(' ')[0]
       }!`;
       //Show hidden container
-      // containerApp.style.opacity = 1;
       loginForm.style.display = 'none';
       containerApp.style.display = 'grid';
       navContainer.style.marginTop = '5%';
@@ -322,7 +316,6 @@ btnClose.addEventListener('click', function (e) {
     console.log(index);
 
     accounts.splice(index, 1);
-    // containerApp.style.opacity = 0;
     loginForm.style.display = 'flex';
     containerApp.style.display = 'none';
     navContainer.style.marginTop = '10%';
@@ -363,28 +356,3 @@ btnSort.addEventListener('click', function (e) {
   displayMovements(currentAccount, !sorted);
   sorted = !sorted;
 });
-
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-// LECTURES
-
-// const currencies = new Map([
-//   ['USD', 'United States dollar'],
-//   ['EUR', 'Euro'],
-//   ['GBP', 'Pound sterling'],
-// ]);
-
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
-
-// /////////////////////////////////////////////////
-
-// // const eurToUsd = 1.1;
-
-// // const movementsUSD = movements.map(mov => mov * eurToUsd);
-
-// // const movementsDescriptions = containerMovements.map(
-// //   (mov, i) =>
-// //     `Movement ${i + 1}: You ${mov > 0 ? 'deposted' : 'withdrew'} ${Math.abs(
-// //       mov
-// //     )}`
-// // );

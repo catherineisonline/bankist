@@ -7,6 +7,71 @@
   margin-top: 10%;
   gap: 2rem;
 }
+.login-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.login-heading img {
+  height: 1.5rem;
+  cursor: pointer;
+}
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  cursor: pointer;
+  height: 2rem;
+  border-bottom: 1px dotted black;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.tooltiptext p {
+  color: white;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  background-color: var(--color-primary);
+  width: max-content;
+  padding: 2rem;
+}
 
 .welcome {
   font-size: 2rem;
@@ -91,13 +156,9 @@
   margin: 4rem auto;
   padding-bottom: 4rem;
   display: none;
-  /* display: grid; */
   grid-template-columns: 4fr 3fr;
   grid-template-rows: auto repeat(3, 15rem) auto;
   gap: 2rem;
-
-  /* NOTE This creates the fade in/out anumation */
-  /* opacity: 0; */
   transition: all 1s;
 }
 
@@ -298,16 +359,3 @@ h2 {
 .timer {
   font-weight: 600;
 }
-
-/* .logout-btn {
-  display: inline-block;
-  background-color: var(--color-primary);
-  font-size: 1.6rem;
-  font-family: inherit;
-  font-weight: 500;
-  border: none;
-  padding: 1.25rem 4.5rem;
-  border-radius: 2rem;
-  cursor: pointer;
-  transition: all 0.3s;
-} */

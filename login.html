@@ -17,23 +17,29 @@
 
 <body>
   <!-- TOP NAVIGATION -->
-  <nav class="login-nav">
+  <header class="login-nav">
     <img src="img/logo.png" alt="Logo" class="logo" />
-    <p class="welcome">Log in to get started</p>
-
-
+    <article class="login-heading">
+      <h1 class="welcome">Log in to get started</h1>
+      <div class="tooltip"> <img class="hint-icon" src="https://img.icons8.com/ios/50/000000/questions.png" />
+        <article class="tooltiptext">
+          <p>Username: <span>ww</span></p>
+          <p>Password: <span>1111</span></p>
+        </article>
+      </div>
+    </article>
     <form class="login">
       <input type="text" placeholder="user" class="login__input login__input--user" />
-      <!-- In practice, use type="password" -->
-      <input type="text" placeholder="password" maxlength="4" class="login__input login__input--password" />
+      <input type="password" placeholder="password" maxlength="4" class="login__input login__input--password" />
       <button class="login__btn">&rarr;</button>
       <p class="warning-text"></p>
-      <a class="back-to-main" href="https://bankist-bank.vercel.app/">Back to main </a>
     </form>
-  </nav>
+
+    <a class="back-to-main" href="https://bankist-bank.vercel.app/">Back to main </a>
+
+  </header>
 
   <main class="app">
-
     <!-- BALANCE -->
     <div class="balance">
       <div>
