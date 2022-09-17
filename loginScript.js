@@ -55,6 +55,7 @@ const containerApp = document.querySelector('.app');
 const containerMovements = document.querySelector('.movements');
 const loginForm = document.querySelector('.login');
 const navContainer = document.querySelector('.login-nav');
+const loginTooltip = document.querySelector('.tooltip');
 
 const btnLogin = document.querySelector('.login__btn');
 const btnTransfer = document.querySelector('.form__btn--transfer');
@@ -185,6 +186,7 @@ const startLogoutTimer = function () {
       clearInterval(timing);
       labelWelcome.textContent = 'Log in to get started';
       containerApp.style.display = 'none';
+      loginTooltip.style.display = 'block';
       loginForm.style.display = 'flex';
       navContainer.style.marginTop = '10%';
     }
@@ -201,6 +203,7 @@ btnLogout.addEventListener('click', function () {
   labelWelcome.textContent = 'Log in to get started';
   containerApp.style.display = 'none';
   loginForm.style.display = 'flex';
+  loginTooltip.style.display = 'block';
   navContainer.style.marginTop = '10%';
 });
 
@@ -248,9 +251,11 @@ btnLogin.addEventListener('click', function (e) {
       labelWelcome.textContent = `Welcome back, ${
         currentAccount.owner.split(' ')[0]
       }!`;
+
       //Show hidden container
       loginForm.style.display = 'none';
       containerApp.style.display = 'grid';
+      loginTooltip.style.display = 'none';
       navContainer.style.marginTop = '5%';
       //Create current date
       const now = new Date();

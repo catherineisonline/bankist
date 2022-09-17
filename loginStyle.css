@@ -4,8 +4,8 @@
   align-items: center;
   flex-direction: column;
   padding: 3rem;
-  margin-top: 10%;
-  gap: 2rem;
+  margin-top: 2%;
+  gap: 4rem;
 }
 .login-heading {
   display: flex;
@@ -79,7 +79,7 @@
 }
 
 .logo {
-  height: 9rem;
+  height: 7rem;
 }
 
 .login {
