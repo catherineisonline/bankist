@@ -24,7 +24,7 @@
   position: relative;
   cursor: pointer;
   height: 2rem;
-  border-bottom: 1px dotted black;
+  border-bottom: 1px dotted var(--black);
 }
 
 /* Tooltip text */
@@ -32,7 +32,7 @@
   visibility: hidden;
   width: 120px;
   background-color: #555;
-  color: #fff;
+  color: var(--white);
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
@@ -61,7 +61,7 @@
   border-color: #555 transparent transparent transparent;
 }
 .tooltiptext p {
-  color: white;
+  color: var(--white);
   font-size: 1.3rem;
   letter-spacing: 1px;
 }
@@ -96,15 +96,13 @@
 
 .login__input {
   border: none;
-  /* padding: 1rem 2rem; */
   font-size: 1.6rem;
   font-family: inherit;
   text-align: center;
-  /* width: 14rem; */
   border-radius: 3rem;
   margin-right: 1rem;
   color: inherit;
-  border: 1px solid #fff;
+  border: 1px solid var(--white);
   transition: all 0.3s;
   width: 40rem;
   padding: 3rem;
@@ -189,7 +187,7 @@
 /* MOVEMENTS */
 .movements {
   grid-row: 2 / span 3;
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 1rem;
   overflow: scroll;
 }
@@ -205,7 +203,7 @@
   font-size: 1.1rem;
   text-transform: uppercase;
   font-weight: 500;
-  color: #fff;
+  color: var(--white);
   padding: 0.1rem 1rem;
   border-radius: 10rem;
   margin-right: 2rem;
@@ -274,7 +272,7 @@
 .operation {
   border-radius: 1rem;
   padding: 3rem 4rem;
-  color: #333;
+  color: var(--black);
 }
 
 .operation--transfer {
@@ -293,7 +291,7 @@ h2 {
   margin-bottom: 1.5rem;
   font-size: 1.7rem;
   font-weight: 600;
-  color: #333;
+  color: var(--black);
 }
 
 .form {
@@ -339,7 +337,7 @@ h2 {
   border: none;
   border-radius: 0.7rem;
   font-size: 1.8rem;
-  background-color: #fff;
+  background-color: var(--white);
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -356,7 +354,7 @@ h2 {
   font-size: 1.25rem;
 }
 .logout {
-  color: black;
+  color: var(--black);
 }
 .timer {
   font-weight: 600;

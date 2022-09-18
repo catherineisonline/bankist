@@ -11,6 +11,8 @@
   --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
   --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
   --gradient-cancellation: linear-gradient(to top left, #e52a5a, #ff585f);
+  --white: #ffffff;
+  --black: #000000;
 }
 
 * {
@@ -75,7 +77,7 @@ body {
   border-radius: 2rem;
   cursor: pointer;
   transition: all 0.3s;
-  color: black;
+  color: var(--black);
 }
 
 .btn:hover {
@@ -97,7 +99,7 @@ body {
   width: max-content;
 }
 .btn---close-cookie {
-  color: black;
+  color: var(--black);
 }
 p {
   color: #666;
@@ -171,7 +173,7 @@ img {
 .nav__link--btn:active {
   color: inherit;
   background-color: var(--color-primary-darker);
-  color: #333;
+  color: var(--black);
 }
 
 form {
@@ -189,7 +191,7 @@ form {
   padding: 1rem;
   border-radius: 2rem;
   background-color: var(--color-primary);
-  color: #222;
+  color: var(--black);
   font-size: 1.7rem;
   font-weight: 500;
   letter-spacing: 1px;
@@ -239,9 +241,6 @@ h4 {
 
 .header__img {
   width: 100%;
-  /* grid-column: 2 / 3;
-  grid-row: 1 / span 4;
-  transform: translateY(-6rem); */
 }
 
 .highlight {
@@ -315,7 +314,7 @@ h4 {
   max-width: 100rem;
   margin: 12rem auto 0 auto;
 
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .operations__tab-container {
@@ -326,7 +325,7 @@ h4 {
 .operations__tab {
   margin-right: 2.5rem;
   transform: translateY(-50%);
-  color: black;
+  color: var(--black);
 }
 
 .operations__tab span {
@@ -446,7 +445,7 @@ h4 {
   border: none;
   background: rgba(255, 255, 255, 0.7);
   font-family: inherit;
-  color: #333;
+  color: var(--black);
   border-radius: 50%;
   height: 5.5rem;
   width: 5.5rem;
@@ -563,7 +562,7 @@ h4 {
 }
 
 .section--sign-up .section__header {
-  color: #fff;
+  color: var(--white);
   text-align: center;
 }
 
@@ -595,10 +594,6 @@ h4 {
   line-height: 5rem;
   gap: 2rem;
 }
-
-/* .footer__item {
-  margin-right: 4rem;
-} */
 
 .footer__link {
   font-size: 1.6rem;
@@ -707,7 +702,7 @@ h4 {
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  background-color: white;
+  background-color: var(--white);
   color: #bbb;
   font-size: 1.3rem;
   font-weight: 400;

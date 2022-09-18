@@ -1,5 +1,4 @@
 'use strict';
-
 //Modal window
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
@@ -43,17 +42,6 @@ document
   });
 message.style.backgroundColor = '#37383d';
 message.style.width = '120%';
-
-//Smooth Scroll Regular
-// const navLinks = document.querySelectorAll('.nav__link');
-// navLinks.forEach(navLink => {
-//   navLink.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     const id = this.getAttribute('href');
-//     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-//   });
-// });
-
 //Smooth Scroll Event Delegation
 document.querySelector('.nav__links').addEventListener('click', function (e) {
   e.preventDefault();
