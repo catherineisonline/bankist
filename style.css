@@ -173,19 +173,29 @@ img {
   color: #333;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.form-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  justify-content: center;
+}
 .next--step {
-  padding: 1.2rem;
+  padding: 1rem;
   border-radius: 2rem;
   background-color: var(--color-primary);
   color: #222;
   font-size: 1.7rem;
   font-weight: 500;
   letter-spacing: 1px;
-  color: inherit;
   text-decoration: none;
-  display: block;
   transition: all 0.3s;
-  width: max-content;
+  width: 30%;
+  text-align: center;
 }
 .next--step:hover {
   color: inherit;
@@ -617,7 +627,8 @@ h4 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 60rem;
+  min-width: 40rem;
+  display: block;
   background-color: #f3f3f3;
   padding: 5rem 6rem;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);

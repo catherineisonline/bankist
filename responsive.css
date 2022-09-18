@@ -114,6 +114,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  .modal__form {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
   .features {
     grid-template-columns: 1fr;
   }
