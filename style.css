@@ -95,7 +95,9 @@ body {
   transition: all 0.3s;
   width: max-content;
 }
-
+.btn---close-cookie {
+  color: black;
+}
 p {
   color: #666;
 }
@@ -129,6 +131,7 @@ img {
 .nav.sticky {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.95);
+  margin-top: 0;
 }
 
 .nav__logo {
