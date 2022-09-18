@@ -355,7 +355,9 @@ h2 {
   text-align: right;
   font-size: 1.25rem;
 }
-
+.logout {
+  color: black;
+}
 .timer {
   font-weight: 600;
 }
