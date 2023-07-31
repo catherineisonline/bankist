@@ -250,3 +250,21 @@ hamMenu.addEventListener('click', function () {
     hiddenMenu.classList.toggle('active');
   }
 });
+
+
+// just adding dark mode
+
+const change=document.getElementById("change")
+const sw=document.getElementById("sw")
+const navilink=document.getElementById("navilink")
+sw.addEventListener('click',()=>{
+  change.classList.toggle('black')
+  nav.classList.toggle('black')
+  
+  
+  
+  // navilink.classList.toggle('black')
+
+ 
+})
+

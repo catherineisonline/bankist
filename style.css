@@ -109,6 +109,10 @@ p {
 button:focus {
   outline: none;
 }
+.nav__logo{
+  cursor: pointer;
+  
+}
 
 img {
   transition: filter 0.5s;
@@ -708,4 +712,25 @@ h4 {
   font-weight: 400;
   padding: 1rem;
   z-index: 999;
+}
+
+.black{
+  background-color: black;
+  color: white;
+}
+#sw{
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: 0.3s ease;
+  z-index: 10000;
+  outline: black;
+
+  
+
 }
