@@ -89,9 +89,11 @@
     top: 10%;
     left: 0;
     right: 0;
+    /* bottom: 0; */
     background-color: #f3f3f3;
     padding: 2rem;
     z-index: 997;
+    /* height: 100vh; */
   }
   .nav__links.active-sticky {
     position: absolute;
