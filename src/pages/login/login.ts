@@ -1,4 +1,4 @@
-// Elements
+// Labels
 const labelWelcome = document.querySelector('.welcome') as HTMLHeadingElement;
 const labelDate = document.querySelector('.date') as HTMLParagraphElement;
 const labelBalance = document.querySelector('.balance__value') as HTMLParagraphElement;
@@ -7,20 +7,20 @@ const labelSumOut = document.querySelector('.summary__value--out') as HTMLParagr
 const labelSumInterest = document.querySelector('.summary__value--interest') as HTMLParagraphElement;
 const labelTimer = document.querySelector('.timer') as HTMLSpanElement;
 const warningText = document.querySelector('.warning-text') as HTMLParagraphElement;
-
+// Containers
 const containerApp = document.querySelector('.app') as HTMLElement;
 const containerMovements = document.querySelector('.movements') as HTMLElement;
 const loginForm = document.querySelector('.login') as HTMLFormElement;
 const navContainer = document.querySelector('.login-nav') as HTMLHeadElement;
 const loginTooltip = document.querySelector('.tooltip') as HTMLElement;
-
+// Buttons
 const btnLogin = document.querySelector('.login__btn') as HTMLButtonElement;
 const btnTransfer = document.querySelector('.form__btn--transfer') as HTMLButtonElement;
 const btnLoan = document.querySelector('.form__btn--loan') as HTMLButtonElement;
 const btnClose = document.querySelector('.form__btn--close') as HTMLButtonElement;
 const btnSort = document.querySelector('.btn--sort')  as HTMLButtonElement;
 const btnLogout = document.querySelector('.logout')  as HTMLButtonElement;
-
+// Inputs
 const inputLoginUsername = document.querySelector('.login__input--user') as HTMLInputElement;
 const inputLoginPin = document.querySelector('.login__input--password') as HTMLInputElement;
 const inputTransferTo = document.querySelector('.form__input--to') as HTMLInputElement;
@@ -28,13 +28,11 @@ const inputTransferAmount = document.querySelector('.form__input--amount') as HT
 const inputLoanAmount = document.querySelector('.form__input--loan-amount') as HTMLInputElement;
 const inputCloseUsername = document.querySelector('.form__input--user') as HTMLInputElement;
 const inputClosePin = document.querySelector('.form__input--pin') as HTMLInputElement;
-
-
-//Implement Login
+// Implement Login
 let currentAccount: Accounts | undefined, timing: number;
-//Loan
+// Loan
 let amount:  number;
-//Sort movements
+// Sort movements
 let sorted = false;
 
 interface Accounts {
