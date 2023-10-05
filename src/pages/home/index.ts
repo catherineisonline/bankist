@@ -1,8 +1,3 @@
-//Modal
-const modal = document.querySelector('.modal') as HTMLElement;
-const overlay = document.querySelector('.overlay') as HTMLDivElement;
-const btnCloseModal = document.querySelector('.btn--close-modal') as HTMLButtonElement;
-const btnsOpenModal = document.querySelectorAll('.btn--show-modal') as NodeListOf<Element>;
 //Cookies Message
 const message = document.createElement('section') as HTMLElement;
 const header = document.querySelector('.header') as HTMLHeadElement;
@@ -19,30 +14,7 @@ const tabsContent = document.querySelectorAll('.operations__content') as NodeLis
 const operationContent = document.querySelector('.operations__content') as HTMLElement;
 
 
-const openModal = function (e: Event) {
-  e.preventDefault();
-  modal.classList.remove('hidden');
-  overlay.classList.remove('hidden');
-};
-
-const closeModal = function () {
-  modal.classList.add('hidden');
-  overlay.classList.add('hidden');
-};
-
-btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
-
-btnCloseModal.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
-
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-    closeModal();
-  }
-});
-
-
-message.classList.add('cookie-message');
+  message.classList.add('cookie-message');
 message.innerHTML =
   "We use cookies for improved functionality and analytics. <button class='btn btn---close-cookie'>Got it! </button>";
 header.append(message);
@@ -51,16 +23,21 @@ if (message.parentElement) {
 }
 message.style.backgroundColor = '#37383d';
 message.style.width = '120%';
-//Smooth Scroll Event Delegation
+
+
 navLinks.addEventListener('click', function (e) {
   e.preventDefault();
+
   const target = e.target as HTMLElement; 
   if ( e.target &&
-    target.classList.contains('nav__link') &&
-    !target.classList.contains('btn--show-modal')
+    target.classList.contains('nav__link')
   ) {
     const id: string | null = target.getAttribute('href');
-    if(id) {
+    const ignoreHref = "/src/pages/login/login.html";
+    if(id === ignoreHref) {
+      window.location.href = ignoreHref;
+    }
+    else if(id) {
       const element = document.querySelector(id);
       if(element) {
         element.scrollIntoView({ behavior: 'smooth' });

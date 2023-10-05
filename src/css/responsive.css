@@ -15,10 +15,6 @@
   .features {
     margin: 0 6rem;
   }
-  .modal {
-    padding: 3rem;
-  }
-
   nav {
     flex-direction: column;
     gap: 3rem;
@@ -89,11 +85,9 @@
     top: 10%;
     left: 0;
     right: 0;
-    /* bottom: 0; */
     background-color: #f3f3f3;
     padding: 2rem;
     z-index: 997;
-    /* height: 100vh; */
   }
   .nav__links.active-sticky {
     position: absolute;
@@ -116,10 +110,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .modal__form {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
   .features {
     grid-template-columns: 1fr;
   }
