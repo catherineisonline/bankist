@@ -8,10 +8,10 @@
 
   <link rel="shortcut icon" type="image/png" href="img/icon.png" />
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="responsive.css" />
+  <link rel="stylesheet" href="/src//css/style.css" />
+  <link rel="stylesheet" href="/src//css/responsive.css" />
   <title>Bankist | When Banking meets Minimalist</title>
-  <script defer src="script.js"></script>
+  <script defer src="/src/pages/home/index.js"></script>
 </head>
 
 <body>
@@ -29,7 +29,8 @@
           <a class="nav__link" href="#section--3">Testimonials</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link nav__link--btn btn--show-modal" href="/">Open account</a>
+          <a class="nav__link nav__link--btn btn--show-modal" href="/src/pages/login/login.html">Open
+            account</a>
         </li>
       </ul>
       <img class="hamburger" src="img/hamburger.png" alt="" />
@@ -265,7 +266,7 @@
         today!
       </h3>
     </div>
-    <button class="btn btn--show-modal">Open your free account today!</button>
+    <button class="btn btn--show-modal" hre="/src/pages/login/login.html">Open your free account today!</button>
   </section>
 
   <footer class="footer">
@@ -303,28 +304,6 @@
     </p>
   </footer>
 
-  <div class="modal hidden">
-    <button class="btn--close-modal">&times;</button>
-    <h2 class="modal__header">
-      Open your bank account <br />
-      in just <span class="highlight">5 minutes</span>
-    </h2>
-    <form>
-      <section class="modal__form">
-        <label>First Name</label>
-        <input type="text" />
-        <label>Last Name</label>
-        <input type="text" />
-        <label>Email Address</label>
-        <input type="email" />
-      </section>
-      <section class="form-buttons">
-        <a class="next--step" href="login.html">Next &rarr;</a>
-        <a class="next--step" href="login.html">Log in </a>
-      </section>
-
-    </form>
-  </div>
   <div class="overlay hidden"></div>
 </body>
 

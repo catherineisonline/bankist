@@ -15,10 +15,6 @@
   .features {
     margin: 0 6rem;
   }
-  .modal {
-    padding: 3rem;
-  }
-
   nav {
     flex-direction: column;
     gap: 3rem;
@@ -114,10 +110,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .modal__form {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
   .features {
     grid-template-columns: 1fr;
   }
