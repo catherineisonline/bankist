@@ -3,7 +3,7 @@
     "typescript": "^5.2.2"
   },
   "scripts": {
-    "start": "live-server",
+    "start": "live-server public",
     "build": "tsc"
   }
 }

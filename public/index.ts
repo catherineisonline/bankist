@@ -34,7 +34,7 @@ navLinks.addEventListener('click', function (e) {
     target.classList.contains('nav__link')
   ) {
     const id: string | null = target.getAttribute('href');
-    const ignoreHref = "/src/pages/login/login.html";
+    const ignoreHref = "./login/login.html";
     if(id === ignoreHref) {
       window.location.href = ignoreHref;
     }

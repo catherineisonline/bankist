@@ -569,9 +569,11 @@ h2 {
   margin-bottom: 6rem;
 }
 
-.section--sign-up .btn {
+.section--sign-up a {
   font-size: 1.9rem;
   padding: 2rem 5rem;
+  width: max-content;
+  margin: 0 auto;
 }
 
 /* FOOTER */

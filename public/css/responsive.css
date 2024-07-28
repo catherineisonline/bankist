@@ -116,6 +116,9 @@
   .balance {
     grid-column: 1 / span 1;
   }
+  .movements {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 600px) {
