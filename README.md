@@ -1,6 +1,6 @@
-<img src="https://github.com/catherineisonline/bankist/blob/main/img/project-preview.webp?raw=true" ></img>
-<img src="https://github.com/catherineisonline/bankist/blob/main/img/project-preview-2.webp?raw=true" ></img>
-<img src="https://github.com/catherineisonline/bankist/blob/main/img/project-preview-3.webp?raw=true" ></img>
+<img src="https://raw.githubusercontent.com/catherineisonline/bankist/main/public/img/project-preview.webp" ></img>
+<img src="https://raw.githubusercontent.com/catherineisonline/bankist/main/public/img/project-preview-2.webp" ></img>
+<img src="https://raw.githubusercontent.com/catherineisonline/bankist/main/public/img/project-preview-3.webp" ></img>
 
 # Bankist
 
