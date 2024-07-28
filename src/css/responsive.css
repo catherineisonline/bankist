@@ -6,8 +6,8 @@
 }
 
 @media screen and (max-width: 1025px) {
-  .nav {
-    padding: 1rem;
+  .header {
+    padding: 2rem;
   }
   .nav__link--btn {
     font-size: 1.3rem;
@@ -18,7 +18,7 @@
   nav {
     flex-direction: column;
     gap: 3rem;
-    margin-top: 2rem;
+    padding: 1rem;
   }
 
   .login__input {
@@ -77,28 +77,37 @@
     display: inline-block;
     width: 5rem;
     cursor: pointer;
+    right: 0;
   }
   .nav__links.active {
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: 10%;
+    align-items: center;
+    justify-content: center;
+    top: 0;
     left: 0;
     right: 0;
     background-color: #f3f3f3;
     padding: 2rem;
     z-index: 997;
+    height: 100vh;
+  }
+  .nav__logo,
+  .hamburger {
+    z-index: 99999;
   }
   .nav__links.active-sticky {
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: 80%;
+    top: 70%;
     left: 0;
     right: 0;
     background-color: rgba(255, 255, 255, 0.95);
     padding: 2rem;
     z-index: 997;
+    z-index: 999999;
   }
   .app {
     grid-template-columns: 1fr;

@@ -5,6 +5,7 @@ const header = document.querySelector('.header');
 const closeCookie = document.querySelector('.btn---close-cookie');
 //Navigation
 const navLinks = document.querySelector('.nav__links');
+const navItems = document.querySelector('.nav__item');
 const nav = document.querySelector('.nav');
 const headerSection = document.querySelector('.header');
 const hamMenu = document.querySelector('.hamburger');
@@ -13,6 +14,7 @@ const tabs = document.querySelectorAll('.operations__tab');
 const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
 const operationContent = document.querySelector('.operations__content');
+const test = [];
 message.classList.add('cookie-message');
 message.innerHTML =
     "We use cookies for improved functionality and analytics. <button class='btn btn---close-cookie'>Got it! </button>";
@@ -147,7 +149,7 @@ const slider = function () {
     const dotContainer = document.querySelector('.dots');
     const createDots = function () {
         slides.forEach(function (_, i) {
-            dotContainer.insertAdjacentHTML('beforeend', `<button class="dots__dot" data-slide="${i}"></button>`);
+            dotContainer.insertAdjacentHTML('beforeend', `<button class="dots__dot" data-slide="${i}"><span class="hidden-text">hidden text</span></button>`);
         });
     };
     const dots = document

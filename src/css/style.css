@@ -1,8 +1,9 @@
 :root {
-  --color-primary: #5ec576;
+  --color-primary: #2bb74c;
+  --color-primary-font: #177f2f;
   --color-secondary: #ffcb03;
   --color-tertiary: #ff585f;
-  --color-primary-darker: #4bbb7d;
+  --color-primary-darker: #247b4a;
   --color-secondary-darker: #ffbb00;
   --color-tertiary-darker: #fd424b;
   --color-primary-opacity: #5ec5763a;
@@ -43,7 +44,10 @@ body {
     transform 1s,
     opacity 1s;
 }
-
+.hidden-text {
+  position: absolute;
+  left: -1000rem;
+}
 .section--hidden {
   opacity: 0;
   transform: translateY(8rem);
@@ -58,7 +62,7 @@ body {
   font-size: 1.8rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: var(--color-primary);
+  color: var(--color-primary-font);
   margin-bottom: 1rem;
 }
 
@@ -92,7 +96,7 @@ body {
   font-size: 1.7rem;
   font-family: inherit;
   font-weight: 500;
-  color: var(--color-primary);
+  color: var(--color-primary-font);
   border: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
@@ -127,16 +131,9 @@ img {
   align-items: center;
   height: 9rem;
   width: 100%;
-  padding: 0 6rem;
+  padding: 1rem;
   z-index: 100;
   flex-direction: row;
-}
-
-/* nav and stickly class at the same time */
-.nav.sticky {
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.95);
-  margin-top: 0;
 }
 
 .nav__logo {
@@ -236,7 +233,7 @@ h1 {
   line-height: 1.8;
 }
 
-h4 {
+h2 {
   font-size: 2.4rem;
   font-weight: 500;
 }
@@ -612,12 +609,13 @@ h4 {
 
 .footer__copyright {
   font-size: 1.4rem;
-  color: #aaa;
+  color: #d5d5d5;
   text-align: center;
 }
 
 .footer__copyright .footer__link {
   font-size: 1.4rem;
+  text-decoration: underline;
 }
 
 .hidden {

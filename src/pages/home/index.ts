@@ -4,6 +4,7 @@ const header = document.querySelector('.header') as HTMLHeadElement;
 const closeCookie = document.querySelector('.btn---close-cookie') as HTMLButtonElement;
 //Navigation
 const navLinks = document.querySelector('.nav__links') as HTMLElement;
+const navItems = document.querySelector('.nav__item') as HTMLElement;
 const nav = document.querySelector('.nav') as HTMLElement;
 const headerSection = document.querySelector('.header') as HTMLHeadElement;
 const hamMenu = document.querySelector('.hamburger') as HTMLImageElement;
@@ -12,7 +13,7 @@ const tabs = document.querySelectorAll('.operations__tab') as NodeListOf<Element
 const tabsContainer = document.querySelector('.operations__tab-container') as HTMLElement;
 const tabsContent = document.querySelectorAll('.operations__content') as NodeListOf<Element>;
 const operationContent = document.querySelector('.operations__content') as HTMLElement;
-
+const test = [];
 
   message.classList.add('cookie-message');
 message.innerHTML =
@@ -188,7 +189,7 @@ const slider = function () {
     slides.forEach(function (_, i) {
       dotContainer.insertAdjacentHTML(
         'beforeend',
-        `<button class="dots__dot" data-slide="${i}"></button>`
+        `<button class="dots__dot" data-slide="${i}"><span class="hidden-text">hidden text</span></button>`
       );
     });
   };
