@@ -103,6 +103,7 @@ body {
   cursor: pointer;
   transition: all 0.3s;
   width: max-content;
+  text-decoration: none;
 }
 .btn---close-cookie {
   color: var(--black);
